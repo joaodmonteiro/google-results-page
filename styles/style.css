@@ -2,10 +2,55 @@ html {
     margin: 0;
     padding: 0;
     font-family: arial,sans-serif;
+    box-sizing: border-box;
+}
+
+*, *:before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+.top-bar {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    align-items: center;
+    padding: 28px;
+    grid-gap: 1em;
 }
 
 .search-bar {
-    width: 500px;
-    height: 50px;
-    border: 3px solid black;
+    width: 690px;
+    height: 44px;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    border-radius: 24px;
+    margin-left: 32px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 6px;
+}
+
+.search-bar > * {
+    padding: 4px;
+}
+
+
+.profile > img {
+    border-radius: 50%;
+}
+
+.bottom-bar {
+    display: flex;
+    margin-left: 180px;
+    width: 660px;
+}
+
+.bottom-bar > * {
+    padding: 10px 20px;
+}
+
+.tools {
+    flex-grow: 1;
+    text-align: end;
 }
